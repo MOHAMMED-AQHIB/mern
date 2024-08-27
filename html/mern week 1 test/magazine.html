@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magazine Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color:white;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar .logo {
+            font-size: 40px;
+            color: blue;
+            /* float: right; */
+            margin-left: 100px;
+
+        }
+        .navbar .menu {
+            display: flex;
+            gap: 70px;
+        }
+        .navbar .menu a {
+            color: blue;
+            text-decoration: none;
+        }
+        .header {
+            display: flex;
+            padding: 20px;
+        }
+        .header .image {
+            flex: 1;
+            background-color: #ddd;
+            width: 100%;
+            height: 150px;
+        }
+        .header .content {
+            flex: 2;
+            padding: 20px;
+        }
+        .columns {
+            display: flex;
+            padding: 20px;
+            gap: 20px;
+        }
+        .column {
+            flex: 1;
+            background-color: #f4f4f4;
+            padding: 80px;
+        }
+        .column img {
+            width: 100%;
+            height: 150px;
+            background-color: #ddd;
+            border-radius: 50%;
+        }
+        .image img {
+            width: 100%;
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div class="navbar">
+            <div class="logo">MAGAZINE</div>
+            <div class="menu">
+                <a href="#">NEWS</a>
+                <a href="#">ART</a>
+                <a href="#">DESIGN</a>
+                <a href="#">CULTURE</a>
+            </div>
+        </div>
+    </center>
+    <div style="background-color: darkorange;" class="header">
+        <div class="image">
+            <img src="https://picsum.photos/300/200?random=2" alt="" />
+        </div>
+        <div class="content">
+            <h1>CONTEMPORARY ART</h1>
+            <p>The soft hum of the city filled the air as dusk settled over the skyline. People moved along the sidewalks, their faces illuminated by the fading sunlight and the warm glow of street lamps flickering on. In the distance, the sound of a saxophone drifted from a nearby café, blending with the distant rumble of traffic. It was one of those evenings where time seemed to slow, as if the world was holding its breath for just a moment longer before the hustle and bustle of life resumed. The smell of freshly brewed coffee wafted through the air, mingling with the earthy scent of rain-soaked pavement, creating a sense of calm in the heart of the city.</p>
+        </div>
+    </div><br>
+    <center>
+    <div class="columns">
+        <div class="column">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9" alt="" />
+            <p>Armani Exchange, often abbreviated as A|X, is a sub-label under the luxury fashion brand Armani. Founded in 1991 by iconic Italian designer Giorgio Armani, A|X targets a younger, more fashion-forward audience with casual yet sophisticated clothing, accessories, and footwear. 
+            </p>
+        </div>
+        <div class="column">
+            <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" alt="" />
+            <p>La Costa Clothing could refer to a specific brand or boutique, though it is not as widely recognized as major global brands. If it's a smaller or local brand, it may feature apparel inspired by coastal themes, beachwear, or casual clothing designed for a seaside lifestyle.</p>
+        </div>
+        <div class="column">
+            <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb" alt="" />
+            <p>armani exchange A|X draws inspiration from street culture, urban fashion, and the energy of global cities, resulting in a collection that is edgy, trendy, and versatile. You'll typically find a range of items, from denim and graphic tees to leather jackets, watches, and accessories, all bearing the signature Armani aesthetic.</p>
+        </div>
+    </div>
+    </center>
+</body>
+</html>
