@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
   const getdata =async()=>{
-    let res = await fetch("jobListUrl",{method:"GET"});
+    let res = await fetch("http://localhost:8080/list_jobs",{method:"GET"});
     let json = await res.json();
     console.log(json);
   }

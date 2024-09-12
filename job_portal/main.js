@@ -1,10 +1,11 @@
 var express = require("express");
 var app = express();
+var cors = require("cors");
 app.use(express.json());
-
+app.use(cors());
 const { MongoClient, ObjectId } = require("mongodb");
 
-const url = "mongodb+srv://Mohammed_Aqhib:Aqhib2106@cluster0.hrf54.mongodb.net/";
+const url = "mongodb+srv://ashokgtncollege:Kumar9840@cluster0.ij4i5.mongodb.net/";
 const client = new MongoClient(url);
 
 const dbName = "jobportal";
@@ -51,3 +52,4 @@ app.delete("/delete_job", async (req, res) => {
 });
 
 app.listen(8080);
+
