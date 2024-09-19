@@ -6,12 +6,18 @@ const { MongoClient, ObjectId } = require("mongodb");
 var cors = require("cors");
 app.use(cors());
 
-app.use((req, res, next) => {
-
-
-  console.log("i'm  a Middleware");
-  next();
-});
+app.use("/api/", (req, res, next) => {
+  let { token } = req.headers;
+  if (token == "" || token == undefined) {
+    res.status(401).json({ Message: "Please add The Token" });
+  } else {
+    if (jwt.verify(token, "SECRET")) {
+      next();
+    } else {
+      res.json({ msg: "Providre the Correct Token" });
+    }
+  }
+}); // MIDDLEWARE
 
 const url = "mongodb+srv://karankumar:karan2909@cluster0.viptk.mongodb.net/";
 const client = new MongoClient(url);
@@ -104,4 +110,3 @@ app.post("/register", async (req, res) => {
   res.status(200).json({ message: "Created New Teacher Record!!" });
 });
 app.listen(8080);
-
